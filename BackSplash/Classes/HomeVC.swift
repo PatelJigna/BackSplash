@@ -52,12 +52,15 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         btnPopular.tag = 200
         
         if isboolLatestSelected!{
-            getPhotosListingFromUnsplash(getPage: intLatestPage, getPerPage: intLatestPerPage)
+            getPhotosListingFromUnsplash(getPage: intLatestPage, getPerPage: intLatestPerPage) { (isSuccess) in
+                
+            }
             
         }
         else{
-            getPhotosListingFromUnsplash(getPage: intPopularPage, getPerPage: intPopularPerPage)
-            
+            getPhotosListingFromUnsplash(getPage: intPopularPage, getPerPage: intPopularPerPage) { (isSuccess) in
+                
+            }
         }
         
         tblViewImageListing.separatorColor = UIColor.clear
@@ -134,7 +137,9 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
                 //we are at last cell
                 intLatestPage = intLatestPage + 1
                 
-                getPhotosListingFromUnsplash(getPage: intLatestPage, getPerPage: intLatestPerPage)
+                getPhotosListingFromUnsplash(getPage: intLatestPage, getPerPage: intLatestPerPage) { (isSuccess) in
+                    
+                }
             }
             
         }
@@ -144,7 +149,9 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
                 //we are at last cell
                 intPopularPage = intPopularPage + 1
                 
-                getPhotosListingFromUnsplash(getPage: intPopularPage, getPerPage: intPopularPerPage)
+                getPhotosListingFromUnsplash(getPage: intPopularPage, getPerPage: intPopularPerPage) { (isSuccess) in
+                    
+                }
             }
         }
         
@@ -159,20 +166,37 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
             isboolLatestSelected = true
             btnLatest.setTitleColor(UIColor.black, for: .normal)
             btnPopular.setTitleColor(UIColor.gray, for: .normal)
-            getPhotosListingFromUnsplash(getPage: intLatestPage, getPerPage: intLatestPerPage)
+            getPhotosListingFromUnsplash(getPage: intLatestPage, getPerPage: intLatestPerPage) { (isSuccess) in
+                guard isSuccess else{
+                    return
+                }
+                self.scrollToTop()
+            }
+            
+            
         }
         else{
             isboolLatestSelected = false
             btnLatest.setTitleColor(UIColor.gray, for: .normal)
             btnPopular.setTitleColor(UIColor.black, for: .normal)
-            getPhotosListingFromUnsplash(getPage: intPopularPage, getPerPage: intPopularPerPage)
+            getPhotosListingFromUnsplash(getPage: intPopularPage, getPerPage: intPopularPerPage) { (isSuccess) in
+                guard isSuccess else{
+                    return
+                }
+                self.scrollToTop()
+            }
         }
+    
+    
     
     }
     
     
     //MARK: - Webservice Call
-    func getPhotosListingFromUnsplash(getPage:Int,getPerPage:Int) {
+    
+    typealias blockGetPhotos = (_ isSuccess:Bool) -> Void
+    
+    func getPhotosListingFromUnsplash(getPage:Int,getPerPage:Int,completionHandler:@escaping blockGetPhotos) {
         
         var strOrder:OrderBy
         if isboolLatestSelected == true {
@@ -196,6 +220,9 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
                 
                 AlertBar.shared.show(type: .custom(.red, .white), message: kNetworkMsg, duration: 30, options: options, completion: nil)
             }
+            completionHandler(false)
+            
+            
             
             return
         }
@@ -219,18 +246,28 @@ class HomeVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
                     print("Poplular Arr count :\(self.arrPopularPhotoResponse.count)")
                 }
                 
-               
-                self.tblViewImageListing.reloadData()
+            
+                DispatchQueue.main.async {
+                     self.tblViewImageListing.reloadData()
+                      completionHandler(true)
+                }
                 
+
             }
             catch{
                 print(error)
+                completionHandler(false)
             }
         
         }
         
     }
     
+    //MARK: Other Methods
+    func scrollToTop() {
+        let indexPath = IndexPath(row: 0, section: 0) as IndexPath
+        self.tblViewImageListing.scrollToRow(at: indexPath, at: .top, animated: false)
+    }
    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

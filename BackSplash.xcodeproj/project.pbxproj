@@ -165,9 +165,7 @@
 				75F43D7220DA9F7700BCB183 /* Utility */,
 				75F43D7120DA9F5400BCB183 /* Classes */,
 				75F43D7020DA9F4600BCB183 /* View */,
-				75F43D4620DA96C900BCB183 /* Main.storyboard */,
 				75789CF62101BA370089A5A6 /* Assets.xcassets */,
-				75F43D4B20DA96CE00BCB183 /* LaunchScreen.storyboard */,
 				75F43D4E20DA96CE00BCB183 /* Info.plist */,
 			);
 			path = BackSplash;
@@ -194,6 +192,8 @@
 		75F43D7020DA9F4600BCB183 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				75F43D4620DA96C900BCB183 /* Main.storyboard */,
+				75F43D4B20DA96CE00BCB183 /* LaunchScreen.storyboard */,
 				75F43D7620DAA3C200BCB183 /* HomeVC */,
 			);
 			path = View;
