@@ -16,6 +16,10 @@
 		75789CF92101E5C10089A5A6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75789CF82101E5C10089A5A6 /* Reachability.swift */; };
 		75789CFB2101EB6F0089A5A6 /* MessageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75789CFA2101EB6F0089A5A6 /* MessageConstant.swift */; };
 		75789CFE2101F54F0089A5A6 /* FullScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75789CFD2101F54F0089A5A6 /* FullScreenVC.swift */; };
+		7580AE1F213D534F0057B21B /* img4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7580AE1B213D534F0057B21B /* img4.png */; };
+		7580AE20213D534F0057B21B /* img3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7580AE1C213D534F0057B21B /* img3.png */; };
+		7580AE21213D534F0057B21B /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7580AE1D213D534F0057B21B /* img2.png */; };
+		7580AE22213D534F0057B21B /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7580AE1E213D534F0057B21B /* img1.png */; };
 		75CA22FE20E3BAA100D974B9 /* HomeTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA22FD20E3BAA100D974B9 /* HomeTblCell.swift */; };
 		75CA230020E3C4EF00D974B9 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA22FF20E3C4EF00D974B9 /* WelcomeVC.swift */; };
 		75CA230220F653A400D974B9 /* SharedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA230120F653A400D974B9 /* SharedClass.swift */; };
@@ -59,6 +63,10 @@
 		75789CF82101E5C10089A5A6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		75789CFA2101EB6F0089A5A6 /* MessageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConstant.swift; sourceTree = "<group>"; };
 		75789CFD2101F54F0089A5A6 /* FullScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenVC.swift; sourceTree = "<group>"; };
+		7580AE1B213D534F0057B21B /* img4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img4.png; sourceTree = "<group>"; };
+		7580AE1C213D534F0057B21B /* img3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img3.png; sourceTree = "<group>"; };
+		7580AE1D213D534F0057B21B /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img2.png; sourceTree = "<group>"; };
+		7580AE1E213D534F0057B21B /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
 		75CA22FD20E3BAA100D974B9 /* HomeTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTblCell.swift; sourceTree = "<group>"; };
 		75CA22FF20E3C4EF00D974B9 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		75CA230120F653A400D974B9 /* SharedClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedClass.swift; sourceTree = "<group>"; };
@@ -112,6 +120,7 @@
 		75789CE82101B87E0089A5A6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7580AE1A213D53360057B21B /* ScreenshotImages */,
 				75789CE92101B8860089A5A6 /* Splash */,
 			);
 			path = Images;
@@ -134,6 +143,17 @@
 				75789CFA2101EB6F0089A5A6 /* MessageConstant.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		7580AE1A213D53360057B21B /* ScreenshotImages */ = {
+			isa = PBXGroup;
+			children = (
+				7580AE1E213D534F0057B21B /* img1.png */,
+				7580AE1D213D534F0057B21B /* img2.png */,
+				7580AE1C213D534F0057B21B /* img3.png */,
+				7580AE1B213D534F0057B21B /* img4.png */,
+			);
+			path = ScreenshotImages;
 			sourceTree = "<group>";
 		};
 		75F43D3620DA96C900BCB183 = {
@@ -359,8 +379,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7580AE1F213D534F0057B21B /* img4.png in Resources */,
+				7580AE22213D534F0057B21B /* img1.png in Resources */,
 				75F43D4D20DA96CE00BCB183 /* LaunchScreen.storyboard in Resources */,
+				7580AE21213D534F0057B21B /* img2.png in Resources */,
 				75F43D4820DA96C900BCB183 /* Main.storyboard in Resources */,
+				7580AE20213D534F0057B21B /* img3.png in Resources */,
 				75789CF52101B9270089A5A6 /* Start Screen.png in Resources */,
 				75789CF32101B9270089A5A6 /* Start Screen@3x.png in Resources */,
 				75789CF72101BA380089A5A6 /* Assets.xcassets in Resources */,
