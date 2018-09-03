@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.7.2)
+  - AlertBar (0.4.2)
+  - Reachability (3.2)
+  - SDWebImage (4.4.0):
+    - SDWebImage/Core (= 4.4.0)
+  - SDWebImage/Core (4.4.0)
+  - SwiftyJSON (4.1.0)
+  - UnsplashSwift (0.2.0):
+    - UnsplashSwift/Core (= 0.2.0)
+  - UnsplashSwift/Core (0.2.0):
+    - Alamofire (~> 4.7)
+
+DEPENDENCIES:
+  - AlertBar
+  - Reachability
+  - SDWebImage
+  - SwiftyJSON
+  - UnsplashSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlertBar
+    - Reachability
+    - SDWebImage
+    - SwiftyJSON
+    - UnsplashSwift
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlertBar: 0512ccfdc339dbe22c93799682308e93c784358f
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDWebImage: b534502786e43dde36dfcaee89356fe6df30e203
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  UnsplashSwift: d4cf856c775ccab2ec1122e2d72222dfd7e56b2d
+
+PODFILE CHECKSUM: cc41617b430f99259031630501a23341fc06bb0c
+
+COCOAPODS: 1.5.3
