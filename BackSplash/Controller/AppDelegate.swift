@@ -13,11 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         RunLoop.current.run(until: Date(timeIntervalSinceNow: 3.0))
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let welcomeVC = WelcomeVC() as UIViewController
+        window?.rootViewController = UINavigationController(rootViewController: welcomeVC)
+        window?.makeKeyAndVisible()
         
         return true
     }
