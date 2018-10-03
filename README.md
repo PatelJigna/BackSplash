@@ -9,3 +9,4 @@ Download free background Images for iPhone.
   3. Slide in Menu bar.
   4. Swipe between sections horizontally.
   5. Render Vertical Cell Images in horizontal layout.
+  6. Integrated an Unsplash API to fetch Images(latest, popular and Oldest).
